@@ -1,29 +1,45 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <img src="assets/imgs/your-image.jpg" alt="Article Image"/>
-    <ion-card-content>
-      <p>Lorem ipsum dolor sit amet, conse ctetur</p>
+<ion-content [fullscreen]="true">
+
+    <!-- Utilisation de ion-card pour créer une box -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Titre de la Carte</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Utilisation de ion-img pour afficher une image -->
+        <ion-img src="assets/images/mon-image.jpg"></ion-img>
+        <p>Description ou contenu supplémentaire ici.</p>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Utilisation de ion-item comme une box simple -->
+    <ion-item>
+      <!-- Utilisation de img pour afficher une image -->
+      <img src="assets/images/mon-image.jpg" alt="Image Description">
+      <p>Description ou contenu supplémentaire ici.</p>
+    </ion-item>
+  
+    <!-- Utilisation de ion-grid pour une mise en page plus complexe -->
+    <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-icon name="heart"></ion-icon>
-          <ion-label>609</ion-label>
-        </ion-col>
-        <ion-col>
-          <ion-icon name="chatbubble"></ion-icon>
-          <ion-label>120</ion-label>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Titre de la Carte</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-img src="assets/images/mon-image.jpg"></ion-img>
+              <p>Description ou contenu supplémentaire ici.</p>
+            </ion-card-content>
+          </ion-card>
         </ion-col>
       </ion-row>
-    </ion-card-content>
-  </ion-card>
-
-  
+    </ion-grid>
   
 </ion-content>

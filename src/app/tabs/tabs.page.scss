@@ -1,0 +1,25 @@
+
+ion-tab-bar {
+    background-color: var(--ion-color-dark-blue);
+    display: flex;
+
+    ion-tab-button {
+        color: var(--ion-color-white);
+        --color-selected: var(--ion-color-light-pink);
+        background: transparent;
+        flex-direction: column;
+        padding: 0;
+
+        ion-icon {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        &.tab-selected ion-icon{
+            color: var(--ion-color-dark-blue);
+            background: var(--ion-color-light-pink) ;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    }
+}
