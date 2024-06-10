@@ -1,0 +1,7 @@
+{
+  "name": "Aria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
