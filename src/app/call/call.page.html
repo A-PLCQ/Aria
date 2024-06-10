@@ -1,13 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Call</ion-title>
+    <ion-title>Numéro d'urgence </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Call</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-searchbar placeholder="Rechercher..." (ionInput)="filterList($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of filteredItems">
+      <ion-label>{{ item.label }}</ion-label>
+      <ion-button slot="end" (click)="callNumber(item.number)">Appeler</ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>
