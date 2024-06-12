@@ -33,7 +33,7 @@ export class AuthService {
   async login(email: string, password: string) {
     try {
       await this.afAuth.signInWithEmailAndPassword(email, password);
-      this.router.navigate(['/home']); // Redirige vers la page d'accueil après une connexion réussie
+      this.router.navigate(['/tabs']); // Redirige vers la page d'accueil après une connexion réussie
     } catch (error) {
       console.error('Error during login:', error);
       throw error;
@@ -43,11 +43,23 @@ export class AuthService {
   async logout() {
     try {
       await this.afAuth.signOut();
-      // Tu peux ajouter d'autres actions ici, comme rediriger l'utilisateur après la déconnexion
+      this.router.navigate(['/auth']); // Redirige vers la page de login après la déconnexion
     } catch (error) {
       console.error('Error during logout:', error);
       throw error;
     }
+  }
+
+  async getCurrentUser() {
+    return new Promise<any>((resolve, reject) => {
+      this.afAuth.onAuthStateChanged((user) => {
+        if (user) {
+          resolve(user);
+        } else {
+          reject(null);
+        }
+      });
+    });
   }
 
   isLoggedIn(): boolean {

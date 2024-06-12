@@ -9,31 +9,32 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./pages/auth/auth.module').then( m => m.AuthPageModule)
+  },
+  {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
   },
   {
     path: 'alert',
-    loadChildren: () => import('./alert/alert.module').then( m => m.AlertPageModule)
+    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
   },
   {
     path: 'call',
-    loadChildren: () => import('./call/call.module').then( m => m.CallPageModule)
+    loadChildren: () => import('./pages/call/call.module').then( m => m.CallPageModule)
   },
   {
-    path: 'settings',
-    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+    path: 'account',
+    loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule)
   },
-  {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
-  }
 
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
@@ -41,3 +42,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+ 

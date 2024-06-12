@@ -10,7 +10,7 @@ ion-content {
   .main-img {
     margin-top: 20px;
     width: 100%;
-    height: auto; // Changé pour 'auto' pour une meilleure responsivité
+    height: auto;
   }
 
   ion-card {
@@ -19,10 +19,13 @@ ion-content {
     background: var(--ion-color-white);
     color: var(--ion-color-dark-blue);
     box-shadow: 0 10px 20px -10px rgba(var(--ion-color-dark-blue), 0.6);
+    margin-bottom: 20px; /* Espacement entre les cartes */
 
     ion-img {
-      width: 100%; // 100% pour une meilleure responsivité
-      height: auto; // Changé pour 'auto'
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 20px; /* Coin arrondi pour l'image */
+      border-top-right-radius: 20px;
     }
 
     ion-card-header,
@@ -38,6 +41,7 @@ ion-content {
 
   ion-card-content {
     display: flex;
+    flex-direction: column; /* Contenu de la carte en colonne */
 
     ion-row {
       width: 100%;

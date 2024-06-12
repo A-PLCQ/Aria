@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CallNumber } from '@ionic-native/call-number/ngx';
+import { CallNumber } from '@awesome-cordova-plugins/call-number/ngx';
 
 interface CallItem {
   label: string;

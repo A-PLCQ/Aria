@@ -1,0 +1,30 @@
+<!-- src/app/pages/account/account.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="user">
+    <ion-item>
+      <ion-label>
+        <h2>Email</h2>
+        <p>{{ user.email }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Full Name</h2>
+        <p>{{ user.fullName }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Address</h2>
+        <p>{{ user.address }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="logout()">Logout</ion-button>
+</ion-content>

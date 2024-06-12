@@ -9,23 +9,23 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        loadChildren: () => import('../home/home-routing.module').then(m => m.HomePageRoutingModule)
+        loadChildren: () => import('../pages/home/home-routing.module').then(m => m.HomePageRoutingModule)
       },
       {
         path: 'contact',
-        loadChildren: () => import('../contact/contact-routing.module').then(m => m.ContactPageRoutingModule)
+        loadChildren: () => import('../pages/contact/contact-routing.module').then(m => m.ContactPageRoutingModule)
       },
       {
         path: 'alert',
-        loadChildren: () => import('../alert/alert-routing.module').then(m => m.AlertPageRoutingModule)
+        loadChildren: () => import('../pages/alert/alert-routing.module').then(m => m.AlertPageRoutingModule)
       },
       {
         path: 'call',
-        loadChildren: () => import('../call/call-routing.module').then(m => m.CallPageRoutingModule)
+        loadChildren: () => import('../pages/call/call-routing.module').then(m => m.CallPageRoutingModule)
       },
       {
         path: 'settings',
-        loadChildren: () => import('../settings/settings-routing.module').then(m => m.SettingsPageRoutingModule)
+        loadChildren: () => import('../pages/account/account-routing.module').then(m => m.AccountPageRoutingModule)
       },
       {
         path: '',

@@ -1,0 +1,33 @@
+/* account.page.scss */
+
+ion-header {
+    ion-toolbar {
+      --background: var(--ion-color-dark-blue);
+    }
+  }
+  
+  ion-content {
+    --background: var(--ion-color-white);
+    
+    ion-list {
+      background: var(--ion-color-white);
+    }
+  
+    ion-item {
+      --background: var(--ion-color-white);
+      --color: var(--ion-color-dark-blue);
+
+      p {
+        color: var(--ion-color-dark-blue);
+      }
+    }
+  
+    ion-button {
+      --background: var(--ion-color-dark-blue);
+      --color: var(--ion-color-white);
+      margin-top: 20px;
+      --border-radius: 20%;
+    }
+}
+  
+  

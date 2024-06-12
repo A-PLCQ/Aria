@@ -10,6 +10,7 @@
     <div class="auth-card" [class.flipped]="isFlipped">
       <div class="front">
         <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <h1>Se connecter</h1>
           <ion-item>
             <ion-label position="floating">Email</ion-label>
             <ion-input formControlName="email"></ion-input>
@@ -18,12 +19,13 @@
             <ion-label position="floating">Password</ion-label>
             <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
-          <ion-button expand="full" type="submit" [disabled]="!loginForm.valid">Login</ion-button>
-          <ion-button expand="full" color="light" (click)="flipCard()">Don't have an account? Register</ion-button>
+          <ion-button expand="full" type="submit" [disabled]="!loginForm.valid">Continuer</ion-button>
+          <ion-button expand="full" color="light" (click)="flipCard()">Vous n'avez pas de compte ?</ion-button>
         </form>
       </div>
       <div class="back">
         <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <h1>Créer mon compte</h1>
           <ion-item>
             <ion-label position="floating">Email</ion-label>
             <ion-input formControlName="email"></ion-input>
@@ -40,8 +42,8 @@
             <ion-label position="floating">Address</ion-label>
             <ion-input formControlName="address"></ion-input>
           </ion-item>
-          <ion-button expand="full" type="submit" [disabled]="!registerForm.valid">Register</ion-button>
-          <ion-button expand="full" color="light" (click)="flipCard()">Already have an account? Login</ion-button>
+          <ion-button expand="full" type="submit" [disabled]="!registerForm.valid">Continuer</ion-button>
+          <ion-button expand="full" color="light" (click)="flipCard()">Vous avez un compte</ion-button>
         </form>
       </div>
     </div>
